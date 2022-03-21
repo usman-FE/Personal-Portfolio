@@ -48,23 +48,40 @@ body::before {
   -o-transform: rotate(20deg);
   transform: rotate(20deg); }
 
+.container {
+  display: grid;
+  grid-template-rows: 15vh 85vh;
+  grid-template-columns: [full-start] minmax(4rem, 1fr) [grid-col-start] repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end]) [grid-col-end] minmax(4rem, 1fr) [full-end]; }
+  .container > * {
+    padding: 3rem;
+    font-size: 3rem; }
+
 .header {
-  background-color: aquamarine; }
+  background-color: aquamarine;
+  grid-column: grid-col-start / grid-col-end;
+  grid-row: 1 / 2; }
 
 .hero-section {
-  background-color: orangered; }
+  background-color: orangered;
+  grid-column: grid-col-start / grid-col-end;
+  grid-row: 2 / 3; }
 
 .about__picture {
-  background-color: crimson; }
+  background-color: crimson;
+  grid-column: grid-col-start / col-end 5; }
 
 .about__content {
-  background-color: darkcyan; }
+  background-color: darkcyan;
+  grid-column: col-start 6 / col-end 12; }
 
 .services {
-  background-color: forestgreen; }
+  background-color: forestgreen;
+  grid-column: grid-col-start / grid-col-end; }
 
 .portfolio {
-  background-color: deeppink; }
+  background-color: deeppink;
+  grid-column: grid-col-start / grid-col-end; }
 
 .footer {
-  background-color: burlywood; }
+  background-color: burlywood;
+  grid-column: grid-col-start / grid-col-end; }
