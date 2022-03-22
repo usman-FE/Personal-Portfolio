@@ -20,6 +20,7 @@ $font-primary: "Poppins", Arial, sans-serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10/16 = 62.5%  1rem = 10px
+  scroll-behavior: smooth;
 }
 
 body {
@@ -66,7 +67,7 @@ body::before {
 
 .container {
   display: grid;
-  grid-template-rows: 10rem calc(100vh - 10rem);
+  grid-template-rows: 12rem calc(100vh - 12rem);
   grid-template-columns:
     [full-start]
     minmax(4rem, 1fr)

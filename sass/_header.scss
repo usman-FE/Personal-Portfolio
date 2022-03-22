@@ -1,5 +1,5 @@
 .header {
-  background-color: aquamarine;
+  // background-color: aquamarine;
   grid-column: grid-col-start / grid-col-end;
   grid-row: 1 / 2;
   display: flex;
@@ -19,28 +19,66 @@
     justify-items: center;
     align-items: center;
     position: fixed;
-    top: 3rem;
+    top: 1rem;
     right: 8.5vw;
 
     &--button {
       grid-row: 1 / -1;
       grid-column: 1 / -1;
-      background-color: $color-light;
       z-index: 1000000;
-      box-shadow: 0 1rem 3rem rgba($bg-color, 0.1);
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    // &--button:hover &--icon::before,
+    // &--button:hover &--icon::after {
+    //   background-color: $color-secondary;
+    // }
+    &--button:hover &--icon {
+      transform: translateY(-0.2rem) scale(1.05);
     }
 
     &--background {
       z-index: 5;
       grid-row: 1 / -1;
       grid-column: 1 / -1;
-      height: 1rem;
-      width: 1rem;
+      height: 6.5rem;
+      width: 6.5rem;
       border-radius: 50%;
-      background-color: rgba($bg-color, 1);
-      box-shadow: 0 1rem 3rem rgba(black, 0.2);
+      background-color: rgba($bg-color, 0.9);
+      box-shadow: 0 1rem 3rem rgba(black, 0.7);
       transition: all 0.7s cubic-bezier(0.86, 0, 0.07, 1);
       // transform: scale(50);
+    }
+
+    &--icon {
+      position: relative;
+      margin-top: 5rem;
+      &,
+      &::before,
+      &::after {
+        width: 4rem;
+        height: 2px;
+        background-color: $color-light;
+        display: inline-block;
+        transition: all 0.2s;
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+      }
+
+      &::after {
+        top: 0.7rem;
+      }
+
+      &::before {
+        top: -0.7rem;
+      }
     }
   }
 
@@ -148,9 +186,23 @@
 
 .active-bg {
   transform: scale(900);
+  background-color: $bg-color;
 }
 
 .active-nav-list {
   transform: translateY(0);
   opacity: 1;
+}
+
+.icon-toggle {
+  background-color: transparent;
+
+  &::after {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  &::before {
+    top: 0;
+    transform: rotate(-135deg);
+  }
 }
