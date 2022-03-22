@@ -1,0 +1,83 @@
+// COLORS
+
+$bg-color: #121212;
+$color-primary: #8c8c8c;
+$color-secondary: #2f89fc;
+$color-light: #fff;
+
+// FONTS
+
+$font-primary: "Poppins", Arial, sans-serif;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10/16 = 62.5%  1rem = 10px
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $bg-color;
+  color: $color-primary;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+body::after {
+  position: fixed;
+  top: -150px;
+  right: -50px;
+  bottom: 0;
+  content: "";
+  width: 400px;
+  height: 600px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  z-index: -1;
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+
+body::before {
+  position: fixed;
+  top: 500px;
+  left: -100px;
+  bottom: 0;
+  content: "";
+  width: 400px;
+  height: 400px;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  z-index: -1;
+  -webkit-transform: rotate(20deg);
+  -moz-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -o-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 15vh 85vh;
+  grid-template-columns:
+    [full-start]
+    minmax(4rem, 1fr)
+    [grid-col-start]
+    repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end])
+    [grid-col-end]
+    minmax(4rem, 1fr)
+    [full-end];
+
+  & > * {
+    padding: 3rem;
+    font-size: 3rem;
+  }
+}

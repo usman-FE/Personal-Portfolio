@@ -1,0 +1,11 @@
+.about {
+  &__picture {
+    background-color: crimson;
+    grid-column: grid-col-start / col-end 5;
+  }
+
+  &__content {
+    background-color: darkcyan;
+    grid-column: col-start 6 / col-end 12;
+  }
+}
