@@ -2,6 +2,7 @@
 
 $bg-color: #121212;
 $dull-dark: rgba(255, 255, 255, 0.6);
+$dull-dark-2: rgba(255, 255, 255, 0.08);
 $color-primary: #8c8c8c;
 $color-secondary: #2f89fc;
 $color-light: #fff;
@@ -68,7 +69,7 @@ body::before {
 
 .container {
   display: grid;
-  grid-template-rows: 10rem calc(100vh - 10rem);
+  grid-template-rows: 10rem calc(100vh - 10rem) min-content;
   grid-template-columns:
     [full-start]
     minmax(4rem, 1fr)
@@ -78,8 +79,8 @@ body::before {
     minmax(4rem, 1fr)
     [full-end];
 
-  & > * {
-    padding: 3rem;
-    font-size: 3rem;
-  }
+  // & > * {
+  //   padding: 3rem;
+  //   font-size: 3rem;
+  // }
 }

@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 2rem;
 
   &__logo-box {
     display: flex;
@@ -19,7 +20,7 @@
     justify-items: center;
     align-items: center;
     position: fixed;
-    top: 1rem;
+    top: 2rem;
     right: 8.5vw;
 
     &--button {
@@ -54,7 +55,7 @@
 
     &--icon {
       position: relative;
-      margin-top: 5rem;
+      margin-top: 1.7rem;
       &,
       &::before,
       &::after {

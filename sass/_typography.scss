@@ -9,6 +9,25 @@
   margin-bottom: 0.7rem;
 }
 
+.heading-2 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: $color-light;
+  letter-spacing: 0.2rem;
+}
+
+.heading-3 {
+  font-size: 2.5rem;
+  color: $color-light;
+  font-weight: 300;
+}
+
+.about__content--heading {
+  font-size: 13vw;
+  line-height: 0.3;
+  color: $dull-dark-2;
+}
+
 .title-paragraph {
   color: $dull-dark;
   font-size: 2rem;
@@ -16,6 +35,13 @@
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 4px;
+}
+
+.detail-paragraph {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: 1px;
 }
 
 .cta,
@@ -55,4 +81,9 @@
   background-position: 100%;
   color: $bg-color;
   transform: translateX(1rem);
+}
+
+.secondary-text {
+  color: $color-secondary;
+  font-weight: 400;
 }
