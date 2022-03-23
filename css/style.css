@@ -138,6 +138,9 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: center; }
+  .header__logo {
+    max-width: 250px;
+    height: auto; }
   .header__navigation {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
