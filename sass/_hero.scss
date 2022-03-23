@@ -1,5 +1,10 @@
 .hero-section {
-  background-color: orangered;
+  // background-color: orangered;
   grid-column: grid-col-start / grid-col-end;
   grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // line-height: 6.6rem;
 }
