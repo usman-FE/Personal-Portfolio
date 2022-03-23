@@ -73,7 +73,7 @@ body::before {
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 0.3rem; }
+  letter-spacing: 4px; }
 
 .cta,
 .cta:visited,
@@ -263,8 +263,14 @@ body::before {
   align-items: center; }
 
 .about__picture {
-  background-color: crimson;
-  grid-column: grid-col-start / col-end 5; }
+  grid-column: grid-col-start / col-end 5;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .about__picture--img {
+    width: auto;
+    height: 100vh;
+    filter: grayscale(3); }
 
 .about__content {
   background-color: darkcyan;
