@@ -51,7 +51,7 @@ body::before {
 
 .container {
   display: grid;
-  grid-template-rows: 10rem calc(100vh - 10rem) min-content;
+  grid-template-rows: 10rem calc(100vh - 10rem);
   grid-template-columns: [full-start] minmax(4rem, 1fr) [grid-col-start] repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end]) [grid-col-end] minmax(4rem, 1fr) [full-end]; }
 
 .heading-1 {
@@ -76,9 +76,9 @@ body::before {
   font-weight: 300;
   letter-spacing: 0.2rem; }
 
-.about__content--heading {
+.bold-heading {
   font-size: 13vw;
-  line-height: 0.3;
+  line-height: 0.4;
   color: rgba(255, 255, 255, 0.08); }
 
 .title-paragraph {
@@ -349,8 +349,25 @@ body::before {
     margin-top: -3rem; }
 
 .services {
-  background-color: forestgreen;
-  grid-column: grid-col-start / grid-col-end; }
+  grid-column: grid-col-start / grid-col-end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 7rem;
+  margin-top: 26rem; }
+  .services__heading-1 {
+    font-size: 10vw;
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2; }
+  .services__heading-2 {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    justify-self: end;
+    align-self: end;
+    line-height: 1; }
+  .services__cards {
+    grid-row: 2 / -1;
+    grid-column: 1 / -1; }
 
 .portfolio {
   background-color: deeppink;

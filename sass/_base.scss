@@ -69,7 +69,7 @@ body::before {
 
 .container {
   display: grid;
-  grid-template-rows: 10rem calc(100vh - 10rem) min-content;
+  grid-template-rows: 10rem calc(100vh - 10rem);
   grid-template-columns:
     [full-start]
     minmax(4rem, 1fr)
