@@ -52,10 +52,9 @@
       height: 6.5rem;
       width: 6.5rem;
       border-radius: 50%;
-      background-color: rgba($bg-color, 0.9);
-      box-shadow: 0 1rem 3rem rgba(black, 0.7);
-      transition: all 0.7s cubic-bezier(0.86, 0, 0.07, 1);
-      // transform: scale(50);
+      background-color: $bg-color;
+      // box-shadow: 0 1rem 3rem rgba(black, 0.7);
+      transition: transform 0.9s cubic-bezier(0.86, 0, 0.07, 1);
     }
 
     &--icon {
@@ -143,7 +142,7 @@
     list-style: none;
     text-align: center;
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition-delay: 0.2s;
+    transition-delay: 0.3s;
     transform: translateY(50rem);
     opacity: 0;
   }
@@ -191,8 +190,8 @@
 }
 
 .active-bg {
-  transform: scale(900);
-  background-color: $bg-color;
+  transform: scale(95);
+  // background-color: $bg-color;
 }
 
 .active-nav-list {
