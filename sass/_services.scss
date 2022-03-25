@@ -3,9 +3,9 @@
   grid-column: grid-col-start / grid-col-end;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 7rem;
-  margin-top: 26rem;
+  grid-template-rows: min-content min-content;
+  grid-gap: 12rem;
+  margin: 15rem 0;
 
   &__heading-1 {
     font-size: 10vw;
@@ -24,5 +24,33 @@
   &__cards {
     grid-row: 2 / -1;
     grid-column: 1 / -1;
+    // background-color: aqua;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 4rem;
   }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+
+    &__heading {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 2rem;
+    fill: $color-secondary;
+    height: 5.5rem;
+    width: 5.5rem;
+  }
+}
+
+.card__heading {
+  margin-bottom: 0.8rem;
 }

@@ -59,10 +59,7 @@ body::before {
   font-weight: 700;
   color: #fff;
   text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 1rem;
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem; }
+  letter-spacing: 1rem; }
 
 .heading-2 {
   font-size: 3.5rem;
@@ -71,15 +68,21 @@ body::before {
   letter-spacing: 0.2rem; }
 
 .heading-3 {
-  font-size: 2.1rem;
+  font-size: 2.6rem;
   color: #fff;
   font-weight: 300;
   letter-spacing: 0.2rem; }
 
+.heading-4 {
+  font-size: 2.1rem;
+  color: #fff;
+  font-weight: 400; }
+
 .bold-heading {
   font-size: 13vw;
   line-height: 0.4;
-  color: rgba(255, 255, 255, 0.08); }
+  color: rgba(255, 255, 255, 0.08);
+  letter-spacing: 0.6rem; }
 
 .title-paragraph {
   color: rgba(255, 255, 255, 0.6);
@@ -168,6 +171,7 @@ body::before {
       width: 6.5rem;
       border-radius: 50%;
       background-color: #121212;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.7);
       transition: transform 0.9s cubic-bezier(0.86, 0, 0.07, 1); }
     .header__navigation--icon {
       position: relative;
@@ -287,6 +291,8 @@ body::before {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  .hero-section__heading {
+    margin: 1rem 0; }
 
 .about__picture {
   grid-column: grid-col-start / col-end 5;
@@ -352,9 +358,9 @@ body::before {
   grid-column: grid-col-start / grid-col-end;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 7rem;
-  margin-top: 26rem; }
+  grid-template-rows: min-content min-content;
+  grid-gap: 12rem;
+  margin: 15rem 0; }
   .services__heading-1 {
     font-size: 10vw;
     grid-row: 1 / span 1;
@@ -367,7 +373,26 @@ body::before {
     line-height: 1; }
   .services__cards {
     grid-row: 2 / -1;
-    grid-column: 1 / -1; }
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 4rem; }
+  .services__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center; }
+    .services__card__heading {
+      margin-bottom: 5rem; }
+  .services__icon {
+    margin-bottom: 2rem;
+    fill: #2f89fc;
+    height: 5.5rem;
+    width: 5.5rem; }
+
+.card__heading {
+  margin-bottom: 0.8rem; }
 
 .portfolio {
   background-color: deeppink;

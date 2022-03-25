@@ -3,10 +3,7 @@
   font-weight: 700;
   color: $color-light;
   text-transform: uppercase;
-  text-align: center;
   letter-spacing: 1rem;
-  margin-top: 0.7rem;
-  margin-bottom: 0.7rem;
 }
 
 .heading-2 {
@@ -17,16 +14,23 @@
 }
 
 .heading-3 {
-  font-size: 2.1rem;
+  font-size: 2.6rem;
   color: $color-light;
   font-weight: 300;
   letter-spacing: 0.2rem;
+}
+
+.heading-4 {
+  font-size: 2.1rem;
+  color: $color-light;
+  font-weight: 400;
 }
 
 .bold-heading {
   font-size: 13vw;
   line-height: 0.4;
   color: $dull-dark-2;
+  letter-spacing: 0.6rem;
 }
 
 .title-paragraph {
