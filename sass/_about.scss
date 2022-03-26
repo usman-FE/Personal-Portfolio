@@ -1,6 +1,5 @@
 .about {
   &__picture {
-    // background-color: crimson;
     grid-column: grid-col-start / col-end 5;
     display: flex;
     align-items: center;
@@ -16,7 +15,6 @@
   }
 
   &__content {
-    // background-color: darkcyan;
     grid-column: col-start 6 / col-end 12;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -61,7 +59,6 @@
       justify-content: center;
       width: 4.5rem;
       height: 4.5rem;
-      // padding: 1.5rem;
       border-radius: 50%;
       background-color: $dull-dark-2;
 

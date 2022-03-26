@@ -1,14 +1,34 @@
 .hero-section {
-  // background-color: orangered;
   grid-column: grid-col-start / grid-col-end;
   grid-row: 2 / 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // line-height: 6.6rem;
+
   &__heading {
     margin: 1rem 0;
     text-align: center;
   }
+}
+
+.cta,
+.cta:visited,
+.cta:link {
+  color: $dull-dark;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.3rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+
+  span {
+    text-decoration: underline;
+  }
+}
+
+.cta:hover,
+.cta:active {
+  color: $bg-color;
 }

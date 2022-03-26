@@ -54,11 +54,6 @@ body::before {
   grid-template-rows: 10rem calc(100vh - 10rem);
   grid-template-columns: [full-start] minmax(4rem, 1fr) [grid-col-start] repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end]) [grid-col-end] minmax(4rem, 1fr) [full-end]; }
 
-.about__content,
-.about__picture,
-.portfolio {
-  margin-bottom: 20rem; }
-
 .heading-1 {
   font-size: 5.5rem;
   font-weight: 700;
@@ -109,38 +104,28 @@ body::before {
   text-align: left;
   letter-spacing: 0.3px; }
 
-.cta,
-.cta:visited,
-.cta:link {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 1.6rem;
-  text-decoration: none;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.3rem;
+.secondary-text {
+  color: #2f89fc;
+  font-weight: 400; }
+
+.btn-primary {
   display: inline-block;
-  padding: 1rem 2rem;
+  text-decoration: none;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #2f89fc 50%);
   background-size: 250%;
   transition: all 0.4s;
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
-  .cta span,
-  .cta:visited span,
-  .cta:link span {
-    text-decoration: underline; }
+  .btn-primary:hover, .btn-primary:active {
+    color: #121212;
+    background-position: 100%;
+    transform: translateX(1rem); }
 
-.cta:hover,
-.cta:active {
-  background-position: 100%;
-  color: #121212;
-  transform: translateX(1rem); }
-
-.secondary-text {
-  color: #2f89fc;
-  font-weight: 400; }
+.about__content,
+.about__picture,
+.portfolio {
+  margin-bottom: 20rem; }
 
 .header {
   grid-column: grid-col-start / grid-col-end;
@@ -259,21 +244,11 @@ body::before {
     font-size: 3rem;
     font-weight: 300;
     letter-spacing: 1rem;
-    display: inline-block;
     padding: 1rem 2rem;
     color: #8c8c8c;
-    text-decoration: none;
-    text-transform: uppercase;
-    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #2f89fc 50%);
-    background-size: 250%;
-    transition: all 0.4s;
-    -moz-backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; }
+    text-transform: uppercase; }
   .header__nav-link:hover, .header__nav-link:active {
-    background-position: 100%;
-    color: #121212;
-    transform: translateX(1rem); }
+    color: #121212; }
 
 .active-nav {
   opacity: 1;
@@ -305,6 +280,25 @@ body::before {
   .hero-section__heading {
     margin: 1rem 0;
     text-align: center; }
+
+.cta,
+.cta:visited,
+.cta:link {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.3rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase; }
+  .cta span,
+  .cta:visited span,
+  .cta:link span {
+    text-decoration: underline; }
+
+.cta:hover,
+.cta:active {
+  color: #121212; }
 
 .about__picture {
   grid-column: grid-col-start / col-end 5;
@@ -439,14 +433,19 @@ body::before {
   .portfolio-block:nth-child(even) {
     flex-direction: row-reverse; }
   .portfolio-block__img-box {
-    width: 38%; }
+    width: 38%;
+    overflow: hidden; }
   .portfolio-block__img {
     display: block;
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; }
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+    backface-visibility: hidden; }
+    .portfolio-block__img:hover {
+      transform: scale(1.1); }
   .portfolio-block__img-1 {
     background-image: url(../img/xwork-1.jpg); }
   .portfolio-block__img-2 {
@@ -467,6 +466,14 @@ body::before {
       line-height: 1.4;
       margin-bottom: 2.5rem;
       margin-top: 0.8rem; }
+  .portfolio-block__view-project, .portfolio-block__view-project:link, .portfolio-block__view-project:visited {
+    color: #2f89fc;
+    font-size: 1.75rem;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    text-transform: capitalize; }
+  .portfolio-block__view-project:hover, .portfolio-block__view-project:active {
+    color: #121212; }
 
 .footer {
   background-color: burlywood;

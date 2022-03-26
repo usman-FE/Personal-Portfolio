@@ -33,6 +33,8 @@
 }
 
 .portfolio-block {
+  display: flex;
+
   &:not(:last-child) {
     margin-bottom: 8rem;
   }
@@ -41,10 +43,9 @@
     flex-direction: row-reverse;
   }
 
-  display: flex;
-
   &__img-box {
     width: 38%;
+    overflow: hidden;
     // background-color: brown;
   }
 
@@ -53,8 +54,14 @@
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   &__img-1 {
@@ -86,5 +93,20 @@
       margin-bottom: 2.5rem;
       margin-top: 0.8rem;
     }
+  }
+
+  &__view-project,
+  &__view-project:link,
+  &__view-project:visited {
+    color: $color-secondary;
+    font-size: 1.75rem;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    text-transform: capitalize;
+  }
+
+  &__view-project:hover,
+  &__view-project:active {
+    color: $bg-color;
   }
 }

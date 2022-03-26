@@ -78,15 +78,4 @@ body::before {
     [grid-col-end]
     minmax(4rem, 1fr)
     [full-end];
-
-  // & > * {
-  //   padding: 3rem;
-  //   font-size: 3rem;
-  // }
-}
-
-.about__content,
-.about__picture,
-.portfolio {
-  margin-bottom: 20rem;
 }

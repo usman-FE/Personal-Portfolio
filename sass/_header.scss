@@ -1,5 +1,4 @@
 .header {
-  // background-color: aquamarine;
   grid-column: grid-col-start / grid-col-end;
   grid-row: 1 / 2;
   display: flex;
@@ -37,10 +36,6 @@
       transition: all 0.2s;
     }
 
-    // &--button:hover &--icon::before,
-    // &--button:hover &--icon::after {
-    //   background-color: $color-secondary;
-    // }
     &--button:hover &--icon {
       transform: translateY(-0.2rem) scale(1.05);
     }
@@ -157,29 +152,14 @@
       font-size: 3rem;
       font-weight: 300;
       letter-spacing: 1rem;
-      display: inline-block;
       padding: 1rem 2rem;
       color: $color-primary;
-      text-decoration: none;
       text-transform: uppercase;
-      background-image: linear-gradient(
-        120deg,
-        transparent 0%,
-        transparent 50%,
-        $color-secondary 50%
-      );
-      background-size: 250%;
-      transition: all 0.4s;
-      -moz-backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
     }
 
     &:hover,
     &:active {
-      background-position: 100%;
       color: $bg-color;
-      transform: translateX(1rem);
     }
   }
 }
@@ -191,7 +171,6 @@
 
 .active-bg {
   transform: scale(95);
-  // background-color: $bg-color;
 }
 
 .active-nav-list {
