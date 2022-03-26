@@ -4,11 +4,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: min-content min-content;
-  grid-gap: 12rem;
-  margin: 15rem 0;
+  grid-gap: 18rem;
+  height: 100vh;
 
   &__heading-1 {
-    font-size: 10vw;
+    font-size: 9vw;
+    letter-spacing: 0rem;
     grid-row: 1 / span 1;
     grid-column: 1 / span 2;
   }
