@@ -442,10 +442,11 @@ body::before {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in;
     backface-visibility: hidden; }
     .portfolio-block__img:hover {
-      transform: scale(1.1); }
+      transform: scale(1.05);
+      opacity: 0.4; }
   .portfolio-block__img-1 {
     background-image: url(../img/xwork-1.jpg); }
   .portfolio-block__img-2 {
