@@ -20,33 +20,77 @@
     align-self: end;
     padding: 0.7rem 1.7rem;
     display: block;
+
+    backface-visibility: hidden;
   }
 
   &__form-box {
     grid-row: 2 / -1;
     grid-column: 1 / -1;
-    display: grid;
     row-gap: 3rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: min-content min-content;
-  }
-
-  &__form-heading {
-    grid-column: 1 / -1;
-    text-align: center;
-  }
-
-  &__form {
-    grid-column: 1 / span 1;
-    height: 80vh;
-  }
-  &__img {
-    background-image: url(../img/xwork-3.jpg);
+    background-image: linear-gradient(
+        105deg,
+        rgba($bg-color, 0.9) 0%,
+        rgba($bg-color, 0.9) 55%,
+        transparent 55%
+      ),
+      url(../img/xwork-3.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    grid-column: 2 / span 1;
+    padding: 6rem;
+  }
+
+  &__form-heading {
+    margin-bottom: 6rem;
+  }
+}
+
+.form {
+  &__group {
+    width: 40%;
+  }
+
+  &__group:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    font-size: 1.4rem;
+    padding: 1.5rem 0;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-radius: 1px;
+    color: $color-light;
+    font-family: inherit;
+    font-weight: 300;
+    border-bottom: 1.7px solid $dull-dark-2;
     display: block;
-    height: 80vh;
+    letter-spacing: 0.7px;
+    transition: all 0.5s;
+
+    &:focus {
+      outline: none;
+      border-color: $color-secondary;
+    }
+
+    &::placeholder {
+      color: $dull-dark;
+    }
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4.2rem);
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
   }
 }

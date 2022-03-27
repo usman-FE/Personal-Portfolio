@@ -23,6 +23,7 @@
     align-self: end;
     padding: 0.7rem 1.7rem;
     display: block;
+    backface-visibility: hidden;
   }
 }
 
@@ -146,7 +147,7 @@
   }
 
   &--icon {
-    width: 2.7rem;
-    height: 2.7rem;
+    width: 2.4rem;
+    height: 2.4rem;
   }
 }
