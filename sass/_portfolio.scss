@@ -1,11 +1,12 @@
 .portfolio {
-  // background-color: deeppink;
+  overflow: hidden;
 
   grid-column: grid-col-start / grid-col-end;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: min-content min-content;
   grid-gap: 18rem;
+  padding-top: 5rem;
 
   &__heading-1 {
     font-size: 9vw;
@@ -46,11 +47,14 @@
   &__img-box {
     width: 38%;
     overflow: hidden;
+    z-index: 1;
+    backface-visibility: hidden;
     // background-color: brown;
   }
 
   &__img {
     display: block;
+    position: relative;
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -61,7 +65,22 @@
 
     &:hover {
       transform: scale(1.05);
-      opacity: 0.4;
+    }
+
+    &:hover::before {
+      opacity: 0.6;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $bg-color;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: all 0.3s ease-in;
     }
   }
 
@@ -79,12 +98,11 @@
 
   &__details-box {
     width: 62%;
-    // background-color: blueviolet;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 10% 7%;
+    padding: 8% 7%;
 
     &__heading {
       font-size: 3rem;
@@ -93,6 +111,10 @@
       line-height: 1.4;
       margin-bottom: 2.5rem;
       margin-top: 0.8rem;
+    }
+
+    &__paragraph {
+      margin-bottom: 2.5rem;
     }
   }
 
@@ -104,10 +126,26 @@
     font-weight: 400;
     padding: 0.5rem 1rem;
     text-transform: capitalize;
+    transform: translateX(-1rem);
   }
 
   &__view-project:hover,
   &__view-project:active {
     color: $bg-color;
+  }
+
+  &__stack-icons {
+    list-style: none;
+    display: flex;
+    margin-bottom: 2.5rem;
+  }
+
+  &__icon-item:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &--icon {
+    width: 2.7rem;
+    height: 2.7rem;
   }
 }
