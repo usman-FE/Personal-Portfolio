@@ -506,6 +506,10 @@ body::before {
     width: 2.7rem;
     height: 2.7rem; }
 
+.contact {
+  background-color: blueviolet;
+  grid-column: grid-col-start / grid-col-end; }
+
 .footer {
   background-color: burlywood;
   grid-column: grid-col-start / grid-col-end; }
