@@ -379,8 +379,10 @@ body::before {
     grid-row: 1 / span 1;
     grid-column: 1 / span 3;
     text-align: center;
+    justify-self: center;
     align-self: end;
-    line-height: 0.5; }
+    padding: 0.7rem 1.7rem;
+    display: inline-block; }
   .services__cards {
     grid-row: 2 / -1;
     grid-column: 1 / -1;
@@ -423,7 +425,8 @@ body::before {
     grid-column: 1 / span 3;
     justify-self: center;
     align-self: end;
-    line-height: 0.5; }
+    padding: 0.7rem 1.7rem;
+    display: block; }
 
 .portfolio-blocks {
   grid-row: 2 / -1;
@@ -524,7 +527,8 @@ body::before {
     grid-column: 1 / span 3;
     justify-self: center;
     align-self: end;
-    line-height: 0.5; }
+    padding: 0.7rem 1.7rem;
+    display: block; }
   .contact__form-box {
     grid-row: 2 / -1;
     grid-column: 1 / -1;
