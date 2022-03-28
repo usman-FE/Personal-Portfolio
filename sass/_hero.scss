@@ -5,6 +5,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: -12rem;
+  z-index: 2;
 
   &__heading {
     margin: 1rem 0;
