@@ -607,5 +607,10 @@ body::before {
     background-color: #121212; }
 
 .footer {
-  background-color: burlywood;
-  grid-column: grid-col-start / grid-col-end; }
+  grid-column: grid-col-start / grid-col-end;
+  padding: 6rem; }
+  .footer__text {
+    text-align: center;
+    font-size: 1.5rem; }
+  .footer__link, .footer__link:visited, .footer__link:link {
+    text-decoration: none; }

@@ -1,5 +1,15 @@
 .footer {
-  background-color: burlywood;
-
   grid-column: grid-col-start / grid-col-end;
+  padding: 6rem;
+
+  &__text {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  &__link,
+  &__link:visited,
+  &__link:link {
+    text-decoration: none;
+  }
 }
