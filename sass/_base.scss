@@ -11,6 +11,11 @@ $color-light: #fff;
 
 $font-primary: "Poppins", Arial, sans-serif;
 
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 71.875em; //1150px
+$bp-large: 58.125em; //930px
+$bp-medium: 52.5em; //840px
+
 *,
 *::after,
 *::before {
@@ -21,8 +26,12 @@ $font-primary: "Poppins", Arial, sans-serif;
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; // 10/16 = 62.5%  1rem = 10px
   scroll-behavior: smooth;
+  font-size: 62.5%; // 10/16 = 62.5%  1rem = 10px
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
 }
 
 body {

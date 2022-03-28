@@ -11,6 +11,10 @@
   font-weight: 300;
   color: $color-light;
   letter-spacing: 0.2rem;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 3rem;
+  }
 }
 
 .heading-3 {
@@ -34,10 +38,14 @@
 }
 
 .bold-heading {
-  font-size: 8vw;
+  font-size: 14rem;
   line-height: 0.7;
   color: $dull-dark-2;
   letter-spacing: 0.6rem;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 12rem;
+  }
 }
 
 .title-paragraph {

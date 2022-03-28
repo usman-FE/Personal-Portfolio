@@ -1,5 +1,6 @@
 const btn = document.querySelector(".btn");
 const aboutParallex = document.getElementById('about');
+const aboutParallexImg = document.getElementById('about-img');
 const portImg1 = document.getElementById('port-img1');
 const portImg2 = document.getElementById('port-img2');
 const portImg3 = document.getElementById('port-img3');
@@ -28,11 +29,34 @@ btn.addEventListener("click", function (e) {
 });
 
 // ABOUT SECTION PARALLAX
+const obsCallBack0 = (entries) => {
+  const [entry] = entries;
+  if (entry.isIntersecting && entry.intersectionRatio > 0) {
 
-window.addEventListener('scroll', function () {
-  let offset = window.scrollY;
-  aboutParallex.style.transform = 'translateY(' + (offset * -0.37) + 'px)';
-})
+    if (entry.boundingClientRect.y < 0) return;
+    aboutParallexImg.style.transform = 'translateY(200px)'
+    let scroll1 = window.scrollY
+    window.addEventListener('scroll', function () {
+      let value = 200 + (window.scrollY - scroll1) * -0.35;
+      aboutParallexImg.style.transform = `translateY(${value}px)`;
+      console.log(`Outer: ${value}`);
+    })
+  }
+}
+
+const options0 = {
+  root: null,
+  threshold: 0,
+  rootMargin: '50px',
+}
+
+const observer0 = new IntersectionObserver(obsCallBack0, options0);
+observer0.observe(aboutParallex);
+
+// window.addEventListener('scroll', function () {
+//   let offset = window.scrollY;
+//   aboutParallex.style.transform = 'translateY(' + (offset * -0.37) + 'px)';
+// })
 
 
 
