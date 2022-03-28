@@ -22,6 +22,29 @@
   }
 }
 
+// SOCIAL ICONS
+.social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__icon-item {
+    display: inline-block;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  &__icon {
+    transition: all 0.2s;
+  }
+}
+
 // LAYOUT MARGINS
 .about__content,
 .about__picture,

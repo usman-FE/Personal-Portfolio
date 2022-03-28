@@ -43,25 +43,13 @@
       grid-gap: 5rem;
     }
 
-    &--social-icons {
-      list-style: none;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-    }
-
     &--icon-item {
-      display: inline-block;
       margin-right: 2rem;
     }
 
     &--link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 4.5rem;
       height: 4.5rem;
-      border-radius: 50%;
       background-color: $dull-dark-2;
 
       &:hover .about__content--icon {
@@ -73,7 +61,6 @@
       height: 2rem;
       width: 2rem;
       fill: $color-secondary;
-      transition: all 0.2s;
     }
 
     &--contact-detail {

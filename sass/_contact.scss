@@ -27,7 +27,8 @@
   &__form-box {
     grid-row: 2 / -1;
     grid-column: 1 / -1;
-    row-gap: 3rem;
+    display: flex;
+    justify-content: space-between;
     background-image: linear-gradient(
         105deg,
         rgba($bg-color, 0.9) 0%,
@@ -41,14 +42,49 @@
     padding: 6rem;
   }
 
+  &__social-icons-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &__form-heading {
     margin-bottom: 6rem;
+  }
+
+  &--social-icons {
+    flex-direction: column;
+  }
+
+  &--icon-item:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &--link {
+    width: 3.3rem;
+    height: 3.3rem;
+    background-color: rgba($bg-color, 0.8);
+    border: 1px solid $color-secondary;
+
+    &:hover .contact--icon {
+      fill: $color-light;
+    }
+
+    &:hover.contact--link {
+      border-color: $color-light;
+    }
+  }
+
+  &--icon {
+    height: 1.4rem;
+    width: 1.4rem;
+    fill: $color-secondary;
   }
 }
 
 .form {
   &__group {
-    width: 40%;
+    width: 59%;
   }
 
   &__group:not(:last-child) {
