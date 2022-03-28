@@ -86,7 +86,7 @@ body::before {
 
 .bold-heading {
   font-size: 13vw;
-  line-height: 0.4;
+  line-height: 0.7;
   color: rgba(255, 255, 255, 0.08);
   letter-spacing: 0.6rem; }
 
@@ -325,7 +325,8 @@ body::before {
     grid-column: 1 / -1;
     grid-row: 1 / span 1;
     justify-self: start;
-    align-self: start; }
+    align-self: start;
+    line-height: 0.4; }
   .about__content--detail {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
@@ -381,7 +382,7 @@ body::before {
     text-align: center;
     justify-self: center;
     align-self: end;
-    padding: 0.7rem 1.7rem;
+    padding: 0.35rem 1.7rem;
     display: inline-block;
     backface-visibility: hidden; }
   .services__cards {
@@ -426,7 +427,7 @@ body::before {
     grid-column: 1 / span 3;
     justify-self: center;
     align-self: end;
-    padding: 0.7rem 1.7rem;
+    padding: 0.35rem 1.7rem;
     display: block;
     backface-visibility: hidden; }
 
@@ -529,7 +530,7 @@ body::before {
     grid-column: 1 / span 3;
     justify-self: center;
     align-self: end;
-    padding: 0.7rem 1.7rem;
+    padding: 0.35rem 1.7rem;
     display: block;
     backface-visibility: hidden; }
   .contact__form-box {
@@ -589,6 +590,21 @@ body::before {
   margin-top: 0.7rem;
   display: block;
   transition: all 0.3s; }
+
+.form__submit {
+  color: #121212;
+  font-size: 1.4rem;
+  font-family: inherit;
+  font-weight: 400;
+  letter-spacing: 0.4rem;
+  padding: 0.8rem 1rem;
+  text-transform: uppercase;
+  border: none;
+  background-color: #2f89fc;
+  width: 100%; }
+  .form__submit:hover {
+    color: #fff;
+    background-color: #121212; }
 
 .footer {
   background-color: burlywood;

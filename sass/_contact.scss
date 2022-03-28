@@ -18,7 +18,7 @@
     grid-column: 1 / span 3;
     justify-self: center;
     align-self: end;
-    padding: 0.7rem 1.7rem;
+    padding: 0.35rem 1.7rem;
     display: block;
 
     backface-visibility: hidden;
@@ -102,5 +102,24 @@
     margin-top: 0.7rem;
     display: block;
     transition: all 0.3s;
+  }
+
+  &__submit {
+    color: $bg-color;
+    font-size: 1.4rem;
+    font-family: inherit;
+    font-weight: 400;
+    letter-spacing: 0.4rem;
+    padding: 0.8rem 1rem;
+    text-transform: uppercase;
+    border: none;
+    background-color: $color-secondary;
+    // box-shadow: 0 1rem 3rem rgba(black, 0.6);
+    width: 100%;
+
+    &:hover {
+      color: $color-light;
+      background-color: $bg-color;
+    }
   }
 }
