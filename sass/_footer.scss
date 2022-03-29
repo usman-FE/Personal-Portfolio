@@ -1,6 +1,7 @@
 .footer {
   grid-column: grid-col-start / grid-col-end;
-  padding: 6rem;
+  padding: 6rem 0;
+  text-align: center;
 
   &__text {
     text-align: center;

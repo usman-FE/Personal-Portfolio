@@ -11,8 +11,8 @@ html {
   font-size: 62.5%; }
   @media only screen and (max-width: 71.875em) {
     html {
-      font-size: 57%; } }
-  @media only screen and (max-width: 25.875em) {
+      font-size: 51%; } }
+  @media only screen and (max-width: 25em) {
     html {
       font-size: 48%; } }
 
@@ -62,6 +62,9 @@ body::before {
   @media only screen and (max-width: 52.5em) {
     .container {
       grid-template-columns: [full-start] minmax(2rem, 1fr) [grid-col-start] repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end]) [grid-col-end] minmax(2rem, 1fr) [full-end]; } }
+  @media only screen and (max-width: 25em) {
+    .container {
+      grid-template-columns: [full-start] 2px [grid-col-start] repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end]) [grid-col-end] 2px [full-end]; } }
 
 .heading-1 {
   font-size: 5.5rem;
@@ -81,6 +84,9 @@ body::before {
   @media only screen and (max-width: 52.5em) {
     .heading-2 {
       font-size: 2.2rem; } }
+  @media only screen and (max-width: 25em) {
+    .heading-2 {
+      font-size: 1.2rem; } }
 
 .heading-3 {
   font-size: 2.6rem;
@@ -110,9 +116,12 @@ body::before {
   @media only screen and (max-width: 52.5em) {
     .bold-heading {
       font-size: 9rem; } }
-  @media only screen and (max-width: 25.875em) {
+  @media only screen and (max-width: 34.375em) {
     .bold-heading {
       font-size: 7rem; } }
+  @media only screen and (max-width: 25em) {
+    .bold-heading {
+      font-size: 5rem; } }
 
 .title-paragraph {
   color: rgba(255, 255, 255, 0.6);
@@ -189,7 +198,7 @@ body::before {
   height: 8px;
   background: #2f89fc;
   width: 0%;
-  transition: all 0.5s ease-in-out; }
+  transition: all 0.3s ease-in-out; }
 
 .header {
   grid-column: grid-col-start / grid-col-end;
@@ -206,7 +215,7 @@ body::before {
   .header__logo {
     max-width: 250px;
     height: auto; }
-    @media only screen and (max-width: 25.875em) {
+    @media only screen and (max-width: 34.375em) {
       .header__logo {
         max-width: 150px; } }
   .header__navigation {
@@ -351,7 +360,7 @@ body::before {
   .hero-section__heading {
     margin: 1rem 0;
     text-align: center; }
-    @media only screen and (max-width: 25.875em) {
+    @media only screen and (max-width: 34.375em) {
       .hero-section__heading {
         font-size: 3rem; } }
 
@@ -397,7 +406,7 @@ body::before {
         display: flex;
         justify-content: center;
         z-index: 1; } }
-    @media only screen and (max-width: 25.875em) {
+    @media only screen and (max-width: 34.375em) {
       .about__picture--img {
         transition: none; } }
 
@@ -411,6 +420,9 @@ body::before {
   @media only screen and (max-width: 52.5em) {
     .about__content {
       grid-column: col-start 2 / col-end 11; } }
+  @media only screen and (max-width: 25em) {
+    .about__content {
+      grid-column: full-start / full-end; } }
   .about__content--heading {
     grid-column: 1 / -1;
     grid-row: 1 / span 1;
@@ -420,7 +432,7 @@ body::before {
     @media only screen and (max-width: 58.125em) {
       .about__content--heading {
         font-size: 12rem; } }
-    @media only screen and (max-width: 25.875em) {
+    @media only screen and (max-width: 34.375em) {
       .about__content--heading {
         padding: 0;
         font-size: 10rem; } }
@@ -437,7 +449,7 @@ body::before {
     @media only screen and (max-width: 52.5em) {
       .about__content--detail {
         padding: 2rem 7rem; } }
-    @media only screen and (max-width: 25.875em) {
+    @media only screen and (max-width: 34.375em) {
       .about__content--detail {
         padding: 2rem 3rem; } }
   .about__content--icon-item {
@@ -480,6 +492,9 @@ body::before {
     padding: 0.35rem 1.7rem;
     display: inline-block;
     backface-visibility: hidden; }
+    @media only screen and (max-width: 34.375em) {
+      .services__heading-2 {
+        padding: 0; } }
   .services__cards {
     grid-row: 2 / -1;
     grid-column: 1 / -1;
@@ -524,6 +539,9 @@ body::before {
     padding: 0.35rem 1.7rem;
     display: block;
     backface-visibility: hidden; }
+    @media only screen and (max-width: 34.375em) {
+      .portfolio__heading-2 {
+        padding: 0; } }
 
 .portfolio-blocks {
   grid-row: 2 / -1;
@@ -533,10 +551,21 @@ body::before {
 
 .portfolio-block {
   display: flex; }
+  @media only screen and (max-width: 52.5em) {
+    .portfolio-block {
+      flex-direction: column !important;
+      align-items: center; } }
+  @media only screen and (max-width: 34.375em) {
+    .portfolio-block {
+      flex-direction: row !important;
+      align-items: flex-end; } }
   .portfolio-block:not(:last-child) {
     margin-bottom: 8rem; }
   .portfolio-block:nth-child(even) {
     flex-direction: row-reverse; }
+    @media only screen and (max-width: 34.375em) {
+      .portfolio-block:nth-child(even) {
+        flex-direction: row-reverse !important; } }
   .portfolio-block__img-box {
     width: 38%;
     overflow: hidden;
@@ -544,10 +573,16 @@ body::before {
     backface-visibility: hidden;
     transition: all 0.25s ease-out;
     transform: translateY(200px); }
-    @media only screen and (max-width: 25.875em) {
+    @media only screen and (max-width: 52.5em) {
+      .portfolio-block__img-box {
+        width: 90%;
+        height: 300px;
+        transform: none; } }
+    @media only screen and (max-width: 34.375em) {
       .portfolio-block__img-box {
         transition: none;
-        width: 45%; } }
+        width: 45%;
+        max-height: auto; } }
   .portfolio-block__img {
     display: block;
     position: relative;
@@ -587,8 +622,10 @@ body::before {
     padding: 8% 7%; }
     @media only screen and (max-width: 52.5em) {
       .portfolio-block__details-box {
-        padding: 8% 4%; } }
-    @media only screen and (max-width: 25.875em) {
+        padding: 8% 4%;
+        width: 90%;
+        height: auto; } }
+    @media only screen and (max-width: 34.375em) {
       .portfolio-block__details-box {
         padding: 5% 3%;
         width: 55%; } }
@@ -599,13 +636,13 @@ body::before {
       line-height: 1.4;
       margin-bottom: 2.5rem;
       margin-top: 0.8rem; }
-      @media only screen and (max-width: 25.875em) {
+      @media only screen and (max-width: 34.375em) {
         .portfolio-block__details-box__heading {
           font-size: 2rem;
           margin: 2rem 0; } }
     .portfolio-block__details-box__paragraph {
       margin-bottom: 2.5rem; }
-      @media only screen and (max-width: 25.875em) {
+      @media only screen and (max-width: 34.375em) {
         .portfolio-block__details-box__paragraph {
           margin-bottom: 2rem;
           font-size: 1.6rem; } }
@@ -626,7 +663,7 @@ body::before {
     margin-bottom: 2.5rem; }
     .portfolio-block__stack-icons p {
       font-size: 1.6rem; }
-    @media only screen and (max-width: 25.875em) {
+    @media only screen and (max-width: 34.375em) {
       .portfolio-block__stack-icons {
         margin-bottom: 1rem;
         font-size: 1.4rem; } }
@@ -635,7 +672,7 @@ body::before {
   .portfolio-block--icon {
     width: 2.4rem;
     height: 2.4rem; }
-    @media only screen and (max-width: 25.875em) {
+    @media only screen and (max-width: 34.375em) {
       .portfolio-block--icon {
         width: 2rem;
         height: 2rem; } }
@@ -659,6 +696,11 @@ body::before {
     padding: 0.35rem 1.7rem;
     display: block;
     backface-visibility: hidden; }
+    @media only screen and (max-width: 34.375em) {
+      .contact__heading-2 {
+        padding: 0;
+        font-size: 1.6rem;
+        text-align: center; } }
   .contact__form-box {
     grid-row: 2 / -1;
     grid-column: 1 / -1;
@@ -672,7 +714,7 @@ body::before {
     @media only screen and (max-width: 52.5em) {
       .contact__form-box {
         background-image: linear-gradient(105deg, rgba(18, 18, 18, 0.9) 0%, rgba(18, 18, 18, 0.9) 70%, transparent 70%), url(../img/xwork-3.jpg); } }
-    @media only screen and (max-width: 25.875em) {
+    @media only screen and (max-width: 34.375em) {
       .contact__form-box {
         padding: 3rem; } }
   .contact__social-icons-box {
@@ -706,7 +748,7 @@ body::before {
   @media only screen and (max-width: 52.5em) {
     .form {
       width: 75%; } }
-  @media only screen and (max-width: 25.875em) {
+  @media only screen and (max-width: 34.375em) {
     .form {
       width: 90%; } }
   .form__group:not(:last-child) {
@@ -764,7 +806,8 @@ body::before {
 
 .footer {
   grid-column: grid-col-start / grid-col-end;
-  padding: 6rem; }
+  padding: 6rem 0;
+  text-align: center; }
   .footer__text {
     text-align: center;
     font-size: 1.5rem; }

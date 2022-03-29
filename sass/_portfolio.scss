@@ -23,6 +23,10 @@
     padding: 0.35rem 1.7rem;
     display: block;
     backface-visibility: hidden;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0;
+    }
   }
 }
 
@@ -37,12 +41,26 @@
 .portfolio-block {
   display: flex;
 
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: row !important;
+    align-items: flex-end;
+  }
+
   &:not(:last-child) {
     margin-bottom: 8rem;
   }
 
   &:nth-child(even) {
     flex-direction: row-reverse;
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: row-reverse !important;
+    }
   }
 
   &__img-box {
@@ -54,9 +72,16 @@
     transform: translateY(200px);
     // background-color: brown;
 
-    @media only screen and (max-width: $bp-note8) {
+    @media only screen and (max-width: $bp-medium) {
+      width: 90%;
+      height: 300px;
+      transform: none;
+    }
+
+    @media only screen and (max-width: $bp-small) {
       transition: none;
       width: 45%;
+      max-height: auto;
     }
   }
 
@@ -114,9 +139,11 @@
 
     @media only screen and (max-width: $bp-medium) {
       padding: 8% 4%;
+      width: 90%;
+      height: auto;
     }
 
-    @media only screen and (max-width: $bp-note8) {
+    @media only screen and (max-width: $bp-small) {
       padding: 5% 3%;
       width: 55%;
     }
@@ -129,7 +156,7 @@
       margin-bottom: 2.5rem;
       margin-top: 0.8rem;
 
-      @media only screen and (max-width: $bp-note8) {
+      @media only screen and (max-width: $bp-small) {
         font-size: 2rem;
         margin: 2rem 0;
       }
@@ -138,7 +165,7 @@
     &__paragraph {
       margin-bottom: 2.5rem;
 
-      @media only screen and (max-width: $bp-note8) {
+      @media only screen and (max-width: $bp-small) {
         margin-bottom: 2rem;
         font-size: 1.6rem;
       }
@@ -172,7 +199,7 @@
       font-size: 1.6rem;
     }
 
-    @media only screen and (max-width: $bp-note8) {
+    @media only screen and (max-width: $bp-small) {
       margin-bottom: 1rem;
       font-size: 1.4rem;
     }
@@ -186,7 +213,7 @@
     width: 2.4rem;
     height: 2.4rem;
 
-    @media only screen and (max-width: $bp-note8) {
+    @media only screen and (max-width: $bp-small) {
       width: 2rem;
       height: 2rem;
     }

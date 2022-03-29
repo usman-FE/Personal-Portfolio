@@ -10,6 +10,8 @@ const block3 = document.getElementById("block-3");
 const blocks = [block1, block2, block3];
 const portImg = [portImg1, portImg2, portImg3];
 const innerWidthMed = 840;
+const innerWidthsmallest = 550;
+const mediumCheck = window.innerWidth <= innerWidthMed && window.innerWidth > innerWidthsmallest;
 
 // NAVIGATION
 
@@ -39,7 +41,7 @@ const obsCallBack0 = (entries) => {
       let value =
         200 +
         (window.scrollY - scroll1) *
-          `${window.innerWidth <= innerWidthMed ? -0.5 : -0.35}`;
+        `${window.innerWidth <= innerWidthMed ? -0.5 : -0.35}`;
       aboutParallexImg.style.transform = `translateY(${value}px)`;
     });
   }
@@ -64,10 +66,11 @@ const obsCallBack1 = (entries) => {
   const [entry] = entries;
   if (entry.isIntersecting && entry.intersectionRatio > 0) {
     if (entry.boundingClientRect.y < 0) return;
-    portImg1.style.transform = "translateY(200px)";
+    portImg1.style.transform = `translateY(${mediumCheck ? 90 : 200
+      }px)`;
     let scroll1 = window.scrollY;
     window.addEventListener("scroll", function () {
-      let value = 200 + (window.scrollY - scroll1) * -0.35;
+      let value = (mediumCheck ? 90 : 200) + (window.scrollY - scroll1) * (mediumCheck ? -0.09 : -0.35);
       portImg1.style.transform = `translateY(${value}px)`;
     });
   }
@@ -87,14 +90,16 @@ const obsCallBack2 = (entries) => {
   const [entry] = entries;
   if (entry.isIntersecting && entry.intersectionRatio > 0) {
     if (entry.boundingClientRect.y < 0) return;
-    portImg2.style.transform = "translateY(200px)";
+    portImg2.style.transform = `translateY(${mediumCheck ? 90 : 200
+      }px)`;
     let scroll1 = window.scrollY;
     window.addEventListener("scroll", function () {
-      let value = 200 + (window.scrollY - scroll1) * -0.35;
+      let value = (mediumCheck ? 90 : 200) + (window.scrollY - scroll1) * (mediumCheck ? -0.09 : -0.35);
       portImg2.style.transform = `translateY(${value}px)`;
     });
   }
 };
+
 
 const options2 = {
   root: null,
@@ -110,10 +115,11 @@ const obsCallBack3 = (entries) => {
   const [entry] = entries;
   if (entry.isIntersecting && entry.intersectionRatio > 0) {
     if (entry.boundingClientRect.y < 0) return;
-    portImg3.style.transform = "translateY(200px)";
+    portImg3.style.transform = `translateY(${mediumCheck ? 90 : 200
+      }px)`;
     let scroll1 = window.scrollY;
     window.addEventListener("scroll", function () {
-      let value = 200 + (window.scrollY - scroll1) * -0.35;
+      let value = (mediumCheck ? 90 : 200) + (window.scrollY - scroll1) * (mediumCheck ? -0.09 : -0.35);
       portImg3.style.transform = `translateY(${value}px)`;
     });
   }

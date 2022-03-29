@@ -12,10 +12,11 @@ $color-light: #fff;
 $font-primary: "Poppins", Arial, sans-serif;
 
 // RESPONSIVE BREAKPOINTS
-$bp-largest: 71.875em; //1150px
-$bp-large: 58.125em; //930px
-$bp-medium: 52.5em; //840px
-$bp-note8: 25.875em; //840px
+$bp-largest: 71.875em; //  1150px
+$bp-large: 58.125em; //    930px
+$bp-medium: 52.5em; //     840px
+$bp-small: 34.375em; //    500px
+$bp-smallest: 25em; //     400px
 
 *,
 *::after,
@@ -31,10 +32,10 @@ html {
   font-size: 62.5%; // 10/16 = 62.5%  1rem = 10px
 
   @media only screen and (max-width: $bp-largest) {
-    font-size: 57%;
+    font-size: 51%;
   }
 
-  @media only screen and (max-width: $bp-note8) {
+  @media only screen and (max-width: $bp-smallest) {
     font-size: 48%;
   }
 }
@@ -101,6 +102,17 @@ body::before {
       repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end])
       [grid-col-end]
       minmax(2rem, 1fr)
+      [full-end];
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-template-columns:
+      [full-start]
+      2px
+      [grid-col-start]
+      repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end])
+      [grid-col-end]
+      2px
       [full-end];
   }
 }
