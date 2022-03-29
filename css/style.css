@@ -546,7 +546,8 @@ body::before {
     transform: translateY(200px); }
     @media only screen and (max-width: 25.875em) {
       .portfolio-block__img-box {
-        transition: none; } }
+        transition: none;
+        width: 45%; } }
   .portfolio-block__img {
     display: block;
     position: relative;
@@ -587,6 +588,10 @@ body::before {
     @media only screen and (max-width: 52.5em) {
       .portfolio-block__details-box {
         padding: 8% 4%; } }
+    @media only screen and (max-width: 25.875em) {
+      .portfolio-block__details-box {
+        padding: 5% 3%;
+        width: 55%; } }
     .portfolio-block__details-box__heading {
       font-size: 3rem;
       letter-spacing: 0;
@@ -594,8 +599,16 @@ body::before {
       line-height: 1.4;
       margin-bottom: 2.5rem;
       margin-top: 0.8rem; }
+      @media only screen and (max-width: 25.875em) {
+        .portfolio-block__details-box__heading {
+          font-size: 2rem;
+          margin: 2rem 0; } }
     .portfolio-block__details-box__paragraph {
       margin-bottom: 2.5rem; }
+      @media only screen and (max-width: 25.875em) {
+        .portfolio-block__details-box__paragraph {
+          margin-bottom: 2rem;
+          font-size: 1.6rem; } }
   .portfolio-block__view-project, .portfolio-block__view-project:link, .portfolio-block__view-project:visited {
     color: #2f89fc;
     font-size: 1.75rem;
@@ -608,12 +621,24 @@ body::before {
   .portfolio-block__stack-icons {
     list-style: none;
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 2.5rem; }
+    .portfolio-block__stack-icons p {
+      font-size: 1.6rem; }
+    @media only screen and (max-width: 25.875em) {
+      .portfolio-block__stack-icons {
+        margin-bottom: 1rem;
+        font-size: 1.4rem; } }
   .portfolio-block__icon-item:not(:last-child) {
     margin-right: 1rem; }
   .portfolio-block--icon {
     width: 2.4rem;
     height: 2.4rem; }
+    @media only screen and (max-width: 25.875em) {
+      .portfolio-block--icon {
+        width: 2rem;
+        height: 2rem; } }
 
 .contact {
   grid-column: grid-col-start / grid-col-end;
@@ -659,7 +684,7 @@ body::before {
   .contact--social-icons {
     flex-direction: column; }
   .contact--icon-item:not(:last-child) {
-    margin-bottom: 2rem; }
+    margin-bottom: 3rem; }
   .contact--link {
     width: 3.3rem;
     height: 3.3rem;

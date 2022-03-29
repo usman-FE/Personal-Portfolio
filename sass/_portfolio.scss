@@ -56,6 +56,7 @@
 
     @media only screen and (max-width: $bp-note8) {
       transition: none;
+      width: 45%;
     }
   }
 
@@ -115,6 +116,11 @@
       padding: 8% 4%;
     }
 
+    @media only screen and (max-width: $bp-note8) {
+      padding: 5% 3%;
+      width: 55%;
+    }
+
     &__heading {
       font-size: 3rem;
       letter-spacing: 0;
@@ -122,10 +128,20 @@
       line-height: 1.4;
       margin-bottom: 2.5rem;
       margin-top: 0.8rem;
+
+      @media only screen and (max-width: $bp-note8) {
+        font-size: 2rem;
+        margin: 2rem 0;
+      }
     }
 
     &__paragraph {
       margin-bottom: 2.5rem;
+
+      @media only screen and (max-width: $bp-note8) {
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+      }
     }
   }
 
@@ -148,7 +164,18 @@
   &__stack-icons {
     list-style: none;
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 2.5rem;
+
+    p {
+      font-size: 1.6rem;
+    }
+
+    @media only screen and (max-width: $bp-note8) {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
   }
 
   &__icon-item:not(:last-child) {
@@ -158,5 +185,10 @@
   &--icon {
     width: 2.4rem;
     height: 2.4rem;
+
+    @media only screen and (max-width: $bp-note8) {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 }
