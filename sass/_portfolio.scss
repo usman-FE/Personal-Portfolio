@@ -105,6 +105,10 @@
     align-items: flex-start;
     padding: 8% 7%;
 
+    @media only screen and (max-width: $bp-medium) {
+      padding: 8% 4%;
+    }
+
     &__heading {
       font-size: 3rem;
       letter-spacing: 0;

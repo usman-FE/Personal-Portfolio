@@ -11,7 +11,7 @@ html {
   font-size: 62.5%; }
   @media only screen and (max-width: 71.875em) {
     html {
-      font-size: 50%; } }
+      font-size: 57%; } }
 
 body {
   font-family: "Poppins", Arial, sans-serif;
@@ -56,6 +56,9 @@ body::before {
   display: grid;
   grid-template-rows: 10rem calc(100vh - 10rem);
   grid-template-columns: [full-start] minmax(4rem, 1fr) [grid-col-start] repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end]) [grid-col-end] minmax(4rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 52.5em) {
+    .container {
+      grid-template-columns: [full-start] minmax(2rem, 1fr) [grid-col-start] repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end]) [grid-col-end] minmax(2rem, 1fr) [full-end]; } }
 
 .heading-1 {
   font-size: 5.5rem;
@@ -72,6 +75,9 @@ body::before {
   @media only screen and (max-width: 58.125em) {
     .heading-2 {
       font-size: 3rem; } }
+  @media only screen and (max-width: 52.5em) {
+    .heading-2 {
+      font-size: 2.2rem; } }
 
 .heading-3 {
   font-size: 2.6rem;
@@ -98,6 +104,9 @@ body::before {
   @media only screen and (max-width: 58.125em) {
     .bold-heading {
       font-size: 12rem; } }
+  @media only screen and (max-width: 52.5em) {
+    .bold-heading {
+      font-size: 9rem; } }
 
 .title-paragraph {
   color: rgba(255, 255, 255, 0.6);
@@ -151,6 +160,10 @@ body::before {
 .services,
 .portfolio {
   padding-bottom: 20rem; }
+
+@media only screen and (max-width: 52.5em) {
+  .about__picture {
+    padding-bottom: 5rem; } }
 
 .header {
   grid-column: grid-col-start / grid-col-end;
@@ -381,6 +394,9 @@ body::before {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, min-content);
     grid-gap: 5rem; }
+    @media only screen and (max-width: 52.5em) {
+      .about__content--detail {
+        padding: 2rem 7rem; } }
   .about__content--icon-item {
     margin-right: 2rem; }
   .about__content--link {
@@ -404,6 +420,9 @@ body::before {
   grid-gap: 16rem;
   align-content: center;
   height: 100vh; }
+  @media only screen and (max-width: 52.5em) {
+    .services {
+      height: auto; } }
   .services__heading-1 {
     letter-spacing: 0rem;
     grid-row: 1 / span 1;
@@ -517,6 +536,9 @@ body::before {
     justify-content: center;
     align-items: flex-start;
     padding: 8% 7%; }
+    @media only screen and (max-width: 52.5em) {
+      .portfolio-block__details-box {
+        padding: 8% 4%; } }
     .portfolio-block__details-box__heading {
       font-size: 3rem;
       letter-spacing: 0;
@@ -574,6 +596,9 @@ body::before {
     background-position: center center;
     background-repeat: no-repeat;
     padding: 6rem; }
+    @media only screen and (max-width: 52.5em) {
+      .contact__form-box {
+        background-image: linear-gradient(105deg, rgba(18, 18, 18, 0.9) 0%, rgba(18, 18, 18, 0.9) 70%, transparent 70%), url(../img/xwork-3.jpg); } }
   .contact__social-icons-box {
     display: flex;
     justify-content: center;
@@ -602,6 +627,9 @@ body::before {
   width: 50%; }
   .form__group {
     width: 80%; }
+  @media only screen and (max-width: 52.5em) {
+    .form {
+      width: 75%; } }
   .form__group:not(:last-child) {
     margin-bottom: 1rem; }
   .form__input {

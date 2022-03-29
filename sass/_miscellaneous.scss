@@ -52,3 +52,9 @@
 .portfolio {
   padding-bottom: 20rem;
 }
+
+.about__picture {
+  @media only screen and (max-width: $bp-medium) {
+    padding-bottom: 5rem;
+  }
+}
