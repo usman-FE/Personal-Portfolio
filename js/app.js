@@ -76,7 +76,7 @@ const obsCallBack1 = (entries) => {
 const options1 = {
   root: null,
   threshold: 0,
-  rootMargin: "50px",
+  rootMargin: "70px",
 };
 
 const observer1 = new IntersectionObserver(obsCallBack1, options1);
@@ -99,7 +99,7 @@ const obsCallBack2 = (entries) => {
 const options2 = {
   root: null,
   threshold: 0,
-  rootMargin: "50px",
+  rootMargin: "70px",
 };
 
 const observer2 = new IntersectionObserver(obsCallBack2, options2);
@@ -122,10 +122,23 @@ const obsCallBack3 = (entries) => {
 const options3 = {
   root: null,
   threshold: 0,
-  rootMargin: "50px",
+  rootMargin: "70px",
 };
 
 const observer3 = new IntersectionObserver(obsCallBack3, options3);
 observer3.observe(block3);
 
-console.log(window.innerWidth <= innerWidthMed ? -0.5 : -0.35);
+// When the user scrolls the page, execute myFunction
+window.onscroll = function () {
+  myFunction();
+};
+
+function myFunction() {
+  const winScroll =
+    document.body.scrollTop || document.documentElement.scrollTop;
+  const height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}

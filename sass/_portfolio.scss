@@ -50,6 +50,8 @@
     overflow: hidden;
     z-index: 1;
     backface-visibility: hidden;
+    transition: all 0.25s ease-out;
+    transform: translateY(200px);
     // background-color: brown;
   }
 
