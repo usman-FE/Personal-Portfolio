@@ -333,7 +333,7 @@ body::before {
     text-align: center; }
     @media only screen and (max-width: 25.875em) {
       .hero-section__heading {
-        font-size: 2.5rem; } }
+        font-size: 3rem; } }
 
 .cta,
 .cta:visited,
