@@ -16,6 +16,10 @@
   &__logo {
     max-width: 250px;
     height: auto;
+
+    @media only screen and (max-width: $bp-note8) {
+      max-width: 150px;
+    }
   }
 
   &__navigation {

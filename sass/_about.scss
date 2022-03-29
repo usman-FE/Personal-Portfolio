@@ -50,6 +50,11 @@
       @media only screen and (max-width: $bp-large) {
         font-size: 12rem;
       }
+
+      @media only screen and (max-width: $bp-note8) {
+        padding: 0;
+        font-size: 10rem;
+      }
     }
 
     &--detail {
@@ -65,6 +70,10 @@
 
       @media only screen and (max-width: $bp-medium) {
         padding: 2rem 7rem;
+      }
+
+      @media only screen and (max-width: $bp-note8) {
+        padding: 2rem 3rem;
       }
     }
 
