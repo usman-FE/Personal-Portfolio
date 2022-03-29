@@ -17,6 +17,7 @@ $bp-large: 58.125em; //    930px
 $bp-medium: 52.5em; //     840px
 $bp-small: 34.375em; //    500px
 $bp-smallest: 25em; //     400px
+$bp-fold: 18.75em; //     300px
 
 *,
 *::after,
@@ -37,6 +38,10 @@ html {
 
   @media only screen and (max-width: $bp-smallest) {
     font-size: 48%;
+  }
+
+  @media only screen and (max-width: $bp-fold) {
+    font-size: 35%;
   }
 }
 

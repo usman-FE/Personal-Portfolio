@@ -15,6 +15,9 @@ html {
   @media only screen and (max-width: 25em) {
     html {
       font-size: 48%; } }
+  @media only screen and (max-width: 18.75em) {
+    html {
+      font-size: 35%; } }
 
 body {
   font-family: "Poppins", Arial, sans-serif;
@@ -688,6 +691,9 @@ body::before {
     grid-row: 1 / span 1;
     grid-column: 1 / span 3;
     text-align: center; }
+    @media only screen and (max-width: 34.375em) {
+      .contact__heading-1 {
+        font-size: 6rem !important; } }
   .contact__heading-2 {
     grid-row: 1 / span 1;
     grid-column: 1 / span 3;
