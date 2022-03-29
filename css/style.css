@@ -397,6 +397,9 @@ body::before {
         display: flex;
         justify-content: center;
         z-index: 1; } }
+    @media only screen and (max-width: 25.875em) {
+      .about__picture--img {
+        transition: none; } }
 
 .about__content {
   grid-column: col-start 6 / col-end 12;
@@ -541,6 +544,9 @@ body::before {
     backface-visibility: hidden;
     transition: all 0.25s ease-out;
     transform: translateY(200px); }
+    @media only screen and (max-width: 25.875em) {
+      .portfolio-block__img-box {
+        transition: none; } }
   .portfolio-block__img {
     display: block;
     position: relative;

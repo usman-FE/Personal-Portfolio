@@ -53,6 +53,10 @@
     transition: all 0.25s ease-out;
     transform: translateY(200px);
     // background-color: brown;
+
+    @media only screen and (max-width: $bp-note8) {
+      transition: none;
+    }
   }
 
   &__img {
