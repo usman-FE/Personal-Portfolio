@@ -72,8 +72,8 @@
       padding: 3rem 7rem;
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: repeat(6, min-content);
-      grid-gap: 5rem;
+      // grid-template-rows: repeat(8, min-content);
+      grid-gap: 2rem;
 
       @media only screen and (max-width: $bp-medium) {
         padding: 2rem 7rem;
@@ -102,10 +102,6 @@
       height: 2rem;
       width: 2rem;
       fill: $color-secondary;
-    }
-
-    &--contact-detail {
-      margin-top: -3rem;
     }
   }
 }

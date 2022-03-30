@@ -148,3 +148,24 @@ function myFunction() {
   const scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
+
+
+// Read more
+const [btnColl] = document.getElementsByClassName("read-more");
+const dots = document.getElementById('dots');
+console.log(btnColl.previousElementSibling);
+
+btnColl.addEventListener("click", function () {
+  this.classList.toggle("active");
+  const content = this.previousElementSibling;
+  console.log(content);
+  if (content.style.maxHeight) {
+    content.style.maxHeight = null;
+    btnColl.innerHTML = "read more &darr;"
+    dots.style.display = 'inline';
+  } else {
+    content.style.maxHeight = content.scrollHeight + "px";
+    btnColl.innerHTML = "read less &uarr;"
+    dots.style.display = 'none';
+  }
+});

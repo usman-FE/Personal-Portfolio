@@ -83,3 +83,66 @@
   width: 0%;
   transition: all 0.3s ease-in-out;
 }
+
+// Read more
+.read-more {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.36s ease-out;
+}
+
+.dots {
+  display: inline;
+}
+
+// TECHOLOGIES ICONS
+.html {
+  background-color: $html !important;
+}
+.css {
+  background-color: $css !important;
+}
+.JS {
+  background-color: $JS !important;
+}
+.sass {
+  background-color: $sass !important;
+}
+.git {
+  background-color: $git !important;
+}
+.bootstrap {
+  background-color: $bootstrap !important;
+}
+
+.technologies {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__item:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &__item {
+    color: $bg-color;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    padding: 0.25rem 0.75rem;
+    background-color: $color-secondary;
+    border-radius: 4%;
+    display: inline-block;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+  }
+}
