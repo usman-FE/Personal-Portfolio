@@ -73,7 +73,7 @@
       display: grid;
       grid-template-columns: 1fr;
       // grid-template-rows: repeat(8, min-content);
-      grid-gap: 2rem;
+      grid-gap: 2.3rem;
 
       @media only screen and (max-width: $bp-medium) {
         padding: 2rem 7rem;

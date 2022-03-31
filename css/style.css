@@ -511,7 +511,7 @@ body::before {
     padding: 3rem 7rem;
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 2rem; }
+    grid-gap: 2.3rem; }
     @media only screen and (max-width: 52.5em) {
       .about__content--detail {
         padding: 2rem 7rem; } }
@@ -632,6 +632,9 @@ body::before {
         width: 90%;
         height: 300px;
         transform: none; } }
+    @media only screen and (max-width: 34.375em) {
+      .portfolio-block__img-box {
+        transition: none; } }
   .portfolio-block__img {
     display: block;
     position: relative;

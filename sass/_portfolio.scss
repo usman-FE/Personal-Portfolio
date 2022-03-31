@@ -78,11 +78,9 @@
       transform: none;
     }
 
-    // @media only screen and (max-width: $bp-small) {
-    //   transition: none;
-    //   width: 45%;
-    //   max-height: auto;
-    // }
+    @media only screen and (max-width: $bp-small) {
+      transition: none;
+    }
   }
 
   &__img {
