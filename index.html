@@ -324,14 +324,15 @@
         Reach out for a new project or just say hello!
       </h2>
       <div class="contact__form-box" id="contact">
-        <form action="#" class="form">
+        <form form id="form" method="post" action="contact-form.php" class="form">
           <h3 class="heading-3 contact__form-heading">SEND ME A MESSAGE</h3>
           <div class="form__group">
             <input
               type="text"
               class="form__input"
               placeholder="Your Name"
-              id="name"
+              id="Name"
+              name="Name"
               required
             />
             <label for="name" class="form__label">Your Name</label>
@@ -341,7 +342,8 @@
               type="email"
               class="form__input"
               placeholder="Your Email"
-              id="email"
+              id="Email"
+              name="Email"
               required
             />
             <label for="email" class="form__label">Your Email</label>
@@ -351,7 +353,8 @@
               type="text"
               class="form__input"
               placeholder="Subject (Optional)"
-              id="subject"
+              id="Subject"
+              name="Subject"
             />
             <label for="subject" class="form__label">Subject (Optional)</label>
           </div>
@@ -359,10 +362,11 @@
             <textarea
               class="form__input"
               name="message"
-              id="message"
               cols="50"
               rows="6"
               placeholder="Your Message"
+              id="Message" 
+              name="Message"
             ></textarea>
             <label for="message" class="form__label">Your Message</label>
           </div>
