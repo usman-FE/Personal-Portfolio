@@ -39,7 +39,7 @@ const obsCallBack0 = (entries) => {
     let scroll1 = window.scrollY;
     window.addEventListener("scroll", function () {
       let value =
-        (200 + (window.scrollY - scroll1) * `${mediumCheck ? -1 : -0.7}`) / 2;
+        200 + (window.scrollY - scroll1) * `${mediumCheck ? -0.5 : -0.35}`;
       aboutParallexImg.style.transform = `translateY(${value}px)`;
     });
   }
@@ -68,9 +68,8 @@ const obsCallBack1 = (entries) => {
     let scroll1 = window.scrollY;
     window.addEventListener("scroll", function () {
       let value =
-        ((mediumCheck ? 90 : 200) +
-          (window.scrollY - scroll1) * (mediumCheck ? -0.2 : -0.6)) /
-        2;
+        (mediumCheck ? 90 : 200) +
+        (window.scrollY - scroll1) * (mediumCheck ? -0.1 : -0.35);
       portImg1.style.transform = `translateY(${value}px)`;
     });
   }
@@ -94,9 +93,8 @@ const obsCallBack2 = (entries) => {
     let scroll1 = window.scrollY;
     window.addEventListener("scroll", function () {
       let value =
-        ((mediumCheck ? 90 : 200) +
-          (window.scrollY - scroll1) * (mediumCheck ? -0.2 : -0.6)) /
-        2;
+        (mediumCheck ? 90 : 200) +
+        (window.scrollY - scroll1) * (mediumCheck ? -0.1 : -0.35);
       portImg2.style.transform = `translateY(${value}px)`;
     });
   }
@@ -120,9 +118,8 @@ const obsCallBack3 = (entries) => {
     let scroll1 = window.scrollY;
     window.addEventListener("scroll", function () {
       let value =
-        ((mediumCheck ? 90 : 200) +
-          (window.scrollY - scroll1) * (mediumCheck ? -0.2 : -0.6)) /
-        2;
+        (mediumCheck ? 90 : 200) +
+        (window.scrollY - scroll1) * (mediumCheck ? -0.1 : -0.35);
       portImg3.style.transform = `translateY(${value}px)`;
     });
   }

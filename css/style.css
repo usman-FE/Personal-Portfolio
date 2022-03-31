@@ -249,7 +249,8 @@ body::before {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 2rem; }
   .technologies__item:not(:last-child) {
     margin-right: 1rem; }
   .technologies__item {
