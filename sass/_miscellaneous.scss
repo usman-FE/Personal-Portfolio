@@ -134,15 +134,20 @@
   }
 
   &__item {
-    color: $bg-color;
-    font-size: 1.8rem;
-    font-weight: 400;
-    letter-spacing: 0.3px;
     padding: 0.25rem 0.75rem;
     background-color: $color-secondary;
     border-radius: 4%;
     display: inline-block;
     text-transform: capitalize;
     margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    backface-visibility: hidden;
+    box-shadow: 0 1rem 3rem rgba(black, 0.8);
+
+    &:hover {
+      transform: translateY(-3px) scale(1.07);
+      box-shadow: 0 2rem 3rem rgba(black, 0.8);
+    }
   }
 }

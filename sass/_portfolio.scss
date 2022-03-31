@@ -24,9 +24,9 @@
     display: block;
     backface-visibility: hidden;
 
-    @media only screen and (max-width: $bp-small) {
-      padding: 0;
-    }
+    // @media only screen and (max-width: $bp-small) {
+    //   padding: 0;
+    // }
   }
 }
 
@@ -46,10 +46,10 @@
     align-items: center;
   }
 
-  @media only screen and (max-width: $bp-small) {
-    flex-direction: row !important;
-    align-items: flex-end;
-  }
+  // @media only screen and (max-width: $bp-small) {
+  //   flex-direction: row !important;
+  //   align-items: flex-end;
+  // }
 
   &:not(:last-child) {
     margin-bottom: 8rem;
@@ -58,9 +58,9 @@
   &:nth-child(even) {
     flex-direction: row-reverse;
 
-    @media only screen and (max-width: $bp-small) {
-      flex-direction: row-reverse !important;
-    }
+    // @media only screen and (max-width: $bp-small) {
+    //   flex-direction: row-reverse !important;
+    // }
   }
 
   &__img-box {
@@ -78,11 +78,11 @@
       transform: none;
     }
 
-    @media only screen and (max-width: $bp-small) {
-      transition: none;
-      width: 45%;
-      max-height: auto;
-    }
+    // @media only screen and (max-width: $bp-small) {
+    //   transition: none;
+    //   width: 45%;
+    //   max-height: auto;
+    // }
   }
 
   &__img {
@@ -143,10 +143,10 @@
       height: auto;
     }
 
-    @media only screen and (max-width: $bp-small) {
-      padding: 5% 3%;
-      width: 55%;
-    }
+    // @media only screen and (max-width: $bp-small) {
+    //   padding: 5% 3%;
+    //   width: 55%;
+    // }
 
     &__heading {
       font-size: 3rem;
@@ -156,19 +156,19 @@
       margin-bottom: 2.5rem;
       margin-top: 0.8rem;
 
-      @media only screen and (max-width: $bp-small) {
-        font-size: 2rem;
-        margin: 2rem 0;
-      }
+      // @media only screen and (max-width: $bp-small) {
+      //   font-size: 2rem;
+      //   margin: 2rem 0;
+      // }
     }
 
     &__paragraph {
       margin-bottom: 2.5rem;
 
-      @media only screen and (max-width: $bp-small) {
-        margin-bottom: 2rem;
-        font-size: 1.6rem;
-      }
+      // @media only screen and (max-width: $bp-small) {
+      //   margin-bottom: 2rem;
+      //   font-size: 1.6rem;
+      // }
     }
   }
 
@@ -199,10 +199,10 @@
       font-size: 1.6rem;
     }
 
-    @media only screen and (max-width: $bp-small) {
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
-    }
+    // @media only screen and (max-width: $bp-small) {
+    //   margin-bottom: 1rem;
+    //   font-size: 1.4rem;
+    // }
   }
 
   &__icon-item:not(:last-child) {
@@ -213,9 +213,9 @@
     width: 2.4rem;
     height: 2.4rem;
 
-    @media only screen and (max-width: $bp-small) {
-      width: 2rem;
-      height: 2rem;
-    }
+    // @media only screen and (max-width: $bp-small) {
+    //   width: 2rem;
+    //   height: 2rem;
+    // }
   }
 }
