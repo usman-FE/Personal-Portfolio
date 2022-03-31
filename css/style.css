@@ -15,9 +15,9 @@ html {
   @media only screen and (max-width: 25em) {
     html {
       font-size: 48%; } }
-  @media only screen and (max-width: 18.75em) {
+  @media only screen and (max-width: 21.875em) {
     html {
-      font-size: 35%; } }
+      font-size: 37%; } }
 
 body {
   font-family: "Poppins", Arial, sans-serif;
@@ -89,7 +89,7 @@ body::before {
       font-size: 2.2rem; } }
   @media only screen and (max-width: 25em) {
     .heading-2 {
-      font-size: 1.2rem; } }
+      font-size: 1.6rem; } }
 
 .heading-3 {
   font-size: 2.6rem;

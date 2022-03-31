@@ -152,12 +152,10 @@ function myFunction() {
 // Read more
 const [btnColl] = document.getElementsByClassName("read-more");
 const dots = document.getElementById("dots");
-console.log(btnColl.previousElementSibling);
 
 btnColl.addEventListener("click", function () {
   this.classList.toggle("active");
   const content = this.previousElementSibling;
-  console.log(content);
   if (content.style.maxHeight) {
     content.style.maxHeight = null;
     btnColl.innerHTML = "read more &darr;";
