@@ -322,7 +322,7 @@ Built with the MVC architecture and OOP which makes the app future proof in term
         Reach out for a new project or just say hello!
       </h2>
       <div class="contact__form-box" id="contact">
-        <form id="form" method="post" action="contact-form.php" class="form">
+        <form id="form" method="post" data-netlify="true" name="contact" class="form">
           <h3 class="heading-3 contact__form-heading">SEND ME A MESSAGE</h3>
           <div class="form__group">
             <input
@@ -351,8 +351,8 @@ Built with the MVC architecture and OOP which makes the app future proof in term
               type="text"
               class="form__input"
               placeholder="Subject (Optional)"
-              id="Subject"
-              name="Subject"
+              id="subject"
+              name="subject"
             />
             <label for="Subject" class="form__label">Subject (Optional)</label>
           </div>
