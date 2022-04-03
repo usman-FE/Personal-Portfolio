@@ -70,7 +70,31 @@
     backface-visibility: hidden;
     transition: all 0.25s ease-out;
     transform: translateY(200px);
-    // background-color: brown;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $bg-color;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: all 0.3s ease-in;
+    }
+
+    &:hover::after {
+      opacity: 0.6;
+    }
+
+    &:hover .portfolio-block__img {
+      transform: scale(1.05);
+    }
 
     @media only screen and (max-width: $bp-medium) {
       width: 90%;
@@ -87,44 +111,12 @@
     display: block;
     position: relative;
     width: 100%;
+    object-fit: cover;
     height: 100%;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
     transition: all 0.3s ease-in;
     backface-visibility: hidden;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-
-    &:hover::before {
-      opacity: 0.6;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-color: $bg-color;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      opacity: 0;
-      transition: all 0.3s ease-in;
-    }
-  }
-
-  &__img-1 {
-    background-image: url(../img/forkify-app.jpg);
-  }
-
-  &__img-2 {
-    background-image: url(../img/todo-app.jpg);
-  }
-
-  &__img-3 {
-    background-image: url(../img/nexter.jpg);
+    grid-row: 1 /-1;
+    grid-column: 1 /-1;
   }
 
   &__details-box {
