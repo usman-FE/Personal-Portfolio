@@ -482,7 +482,8 @@ body::before {
         max-width: 85%;
         display: flex;
         justify-content: center;
-        z-index: 1; } }
+        z-index: 1;
+        transition: none; } }
     @media only screen and (max-width: 34.375em) {
       .about__picture--img {
         max-width: 95%;
@@ -656,7 +657,8 @@ body::before {
       .portfolio-block__img-box {
         width: 90%;
         height: 300px;
-        transform: none; } }
+        transform: none;
+        transition: none; } }
     @media only screen and (max-width: 34.375em) {
       .portfolio-block__img-box {
         transition: none; } }
