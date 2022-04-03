@@ -4,16 +4,17 @@ const aboutParallexImg = document.getElementById("about-img");
 const portImg1 = document.getElementById("port-img1");
 const portImg2 = document.getElementById("port-img2");
 const portImg3 = document.getElementById("port-img3");
+const portImg4 = document.getElementById("port-img4");
 const block1 = document.getElementById("block-1");
 const block2 = document.getElementById("block-2");
 const block3 = document.getElementById("block-3");
-const blocks = [block1, block2, block3];
-const portImg = [portImg1, portImg2, portImg3];
+const block4 = document.getElementById("block-4");
+const blocks = [block1, block2, block3, block4];
 const innerWidthMed = 840;
 const innerWidthsmallest = 550;
 const mediumCheck = window.innerWidth <= innerWidthMed;
 
-// NAVIGATION
+// /////////////////////////////////////////NAVIGATION
 
 btn.addEventListener("click", function (e) {
   if (e.target.classList.contains("header__nav")) return;
@@ -30,7 +31,7 @@ btn.addEventListener("click", function (e) {
     .classList.toggle("icon-toggle");
 });
 
-// ABOUT SECTION PARALLAX
+// /////////////////////////////////////////ABOUT SECTION PARALLAX
 const obsCallBack0 = (entries) => {
   const [entry] = entries;
   if (entry.isIntersecting && entry.intersectionRatio > 0) {
@@ -59,82 +60,7 @@ observer0.observe(aboutParallex);
 //   aboutParallex.style.transform = 'translateY(' + (offset * -0.37) + 'px)';
 // })
 
-// 1
-const obsCallBack1 = (entries) => {
-  const [entry] = entries;
-  if (entry.isIntersecting && entry.intersectionRatio > 0) {
-    if (entry.boundingClientRect.y < 0) return;
-    portImg1.style.transform = `translateY(${mediumCheck ? 90 : 200}px)`;
-    let scroll1 = window.scrollY;
-    window.addEventListener("scroll", function () {
-      let value =
-        (mediumCheck ? 90 : 200) +
-        (window.scrollY - scroll1) * (mediumCheck ? -0.1 : -0.35);
-      portImg1.style.transform = `translateY(${value}px)`;
-    });
-  }
-};
-
-const options1 = {
-  root: null,
-  threshold: 0,
-  rootMargin: "100px",
-};
-
-const observer1 = new IntersectionObserver(obsCallBack1, options1);
-observer1.observe(block1);
-
-// 2
-const obsCallBack2 = (entries) => {
-  const [entry] = entries;
-  if (entry.isIntersecting && entry.intersectionRatio > 0) {
-    if (entry.boundingClientRect.y < 0) return;
-    portImg2.style.transform = `translateY(${mediumCheck ? 90 : 200}px)`;
-    let scroll1 = window.scrollY;
-    window.addEventListener("scroll", function () {
-      let value =
-        (mediumCheck ? 90 : 200) +
-        (window.scrollY - scroll1) * (mediumCheck ? -0.1 : -0.35);
-      portImg2.style.transform = `translateY(${value}px)`;
-    });
-  }
-};
-
-const options2 = {
-  root: null,
-  threshold: 0,
-  rootMargin: "100px",
-};
-
-const observer2 = new IntersectionObserver(obsCallBack2, options2);
-observer2.observe(block2);
-
-// 3
-const obsCallBack3 = (entries) => {
-  const [entry] = entries;
-  if (entry.isIntersecting && entry.intersectionRatio > 0) {
-    if (entry.boundingClientRect.y < 0) return;
-    portImg3.style.transform = `translateY(${mediumCheck ? 90 : 200}px)`;
-    let scroll1 = window.scrollY;
-    window.addEventListener("scroll", function () {
-      let value =
-        (mediumCheck ? 90 : 200) +
-        (window.scrollY - scroll1) * (mediumCheck ? -0.1 : -0.35);
-      portImg3.style.transform = `translateY(${value}px)`;
-    });
-  }
-};
-
-const options3 = {
-  root: null,
-  threshold: 0,
-  rootMargin: "100px",
-};
-
-const observer3 = new IntersectionObserver(obsCallBack3, options3);
-observer3.observe(block3);
-
-// When the user scrolls the page, execute myFunction
+// /////////////////////////////////////////When the user scrolls the page, execute myFunction
 window.onscroll = () => {
   myFunction();
 };
@@ -149,20 +75,56 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 
-// Read more
-const [btnColl] = document.getElementsByClassName("read-more");
-const dots = document.getElementById("dots");
+// /////////////////////////////////////////Read more
+const btnColl = document.querySelectorAll(".read-more");
+btnColl.forEach(btn => {
 
-btnColl.addEventListener("click", function () {
-  this.classList.toggle("active");
-  const content = this.previousElementSibling;
-  if (content.style.maxHeight) {
-    content.style.maxHeight = null;
-    btnColl.innerHTML = "read more &darr;";
-    dots.style.display = "inline";
-  } else {
-    content.style.maxHeight = content.scrollHeight + "px";
-    btnColl.innerHTML = "read less &uarr;";
-    dots.style.display = "none";
+  btn.addEventListener("click", function () {
+    const content = this.previousElementSibling;
+    const dots = content.previousElementSibling.lastElementChild;
+    console.log(dots);
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+      btn.innerHTML = "read more &darr;";
+      dots.style.display = "inline";
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+      btn.innerHTML = "read less &uarr;";
+      dots.style.display = "none";
+    }
+  });
+})
+
+
+
+
+
+// /////////////////////////////////////////PORTFOLIO IMAGES PARALLAX
+
+const obsCallBack = (entries) => {
+  const [entry] = entries;
+  if (entry.isIntersecting && entry.intersectionRatio > 0) {
+    if (entry.boundingClientRect.y < 0) return;
+    const portImg = entry.target.firstElementChild;
+    portImg.style.transform = `translateY(${mediumCheck ? 90 : 200}px)`;
+    let scroll1 = window.scrollY;
+    window.addEventListener("scroll", function () {
+      let value =
+        (mediumCheck ? 90 : 200) +
+        (window.scrollY - scroll1) * (mediumCheck ? -0.1 : -0.35);
+      portImg.style.transform = `translateY(${value}px)`;
+    });
   }
-});
+}
+
+const options = {
+  root: null,
+  threshold: 0,
+  rootMargin: "100px",
+};
+
+
+blocks.forEach((block) => {
+  const observer = new IntersectionObserver(obsCallBack, options);
+  observer.observe(block);
+})
