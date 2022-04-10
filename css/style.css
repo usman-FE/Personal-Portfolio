@@ -263,7 +263,6 @@ body::before {
     display: inline-block;
     text-transform: capitalize;
     margin-bottom: 1rem;
-    cursor: pointer;
     transition: all 0.2s ease-in-out;
     backface-visibility: hidden;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.8); }
