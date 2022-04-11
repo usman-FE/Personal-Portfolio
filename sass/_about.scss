@@ -4,6 +4,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 80%;
 
     @media only screen and (max-width: $bp-medium) {
       grid-column: grid-col-start / grid-col-end;
@@ -12,21 +14,27 @@
 
     &--img {
       display: block;
-      width: auto;
-      max-height: 567px;
+      max-width: 90%;
       filter: grayscale(3);
       z-index: -1;
       transition: all 0.25s ease-out;
-      // transform: translateY(200px);
 
-      @media only screen and (max-width: $bp-medium) {
-        max-width: 95%;
-        height: auto;
+      @media only screen and (max-width: $bp-large) {
+        max-width: 100%;
         display: flex;
         justify-content: center;
         z-index: 1;
       }
+
+      @media only screen and (max-width: $bp-medium) {
+        max-width: 85%;
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+        transition: none;
+      }
       @media only screen and (max-width: $bp-small) {
+        max-width: 95%;
         transition: none;
       }
     }
@@ -34,11 +42,6 @@
 
   &__content {
     grid-column: col-start 6 / col-end 12;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    align-items: center;
-    justify-content: center;
 
     @media only screen and (max-width: $bp-medium) {
       grid-column: col-start 2 / col-end 11;
@@ -52,7 +55,6 @@
       grid-row: 1 / span 1;
       justify-self: start;
       align-self: start;
-      line-height: 0.4;
 
       @media only screen and (max-width: $bp-large) {
         font-size: 12rem;
@@ -67,20 +69,20 @@
     &--detail {
       grid-column: 1 / -1;
       grid-row: 1 / -1;
-      justify-self: start;
-      align-self: start;
-      padding: 3rem 7rem;
+      padding: 0rem 5rem;
       display: grid;
       grid-template-columns: 1fr;
-      // grid-template-rows: repeat(8, min-content);
       grid-gap: 2.3rem;
+      margin-top: -5.1rem;
 
       @media only screen and (max-width: $bp-medium) {
-        padding: 2rem 7rem;
+        padding: 0 7rem;
+        margin-top: -4rem;
       }
 
       @media only screen and (max-width: $bp-small) {
-        padding: 2rem 3rem;
+        padding: 0 3rem;
+        margin-top: -3.5rem;
       }
     }
 

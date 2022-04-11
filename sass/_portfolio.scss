@@ -23,10 +23,6 @@
     padding: 0.35rem 1.7rem;
     display: block;
     backface-visibility: hidden;
-
-    // @media only screen and (max-width: $bp-small) {
-    //   padding: 0;
-    // }
   }
 }
 
@@ -46,21 +42,12 @@
     align-items: center;
   }
 
-  // @media only screen and (max-width: $bp-small) {
-  //   flex-direction: row !important;
-  //   align-items: flex-end;
-  // }
-
   &:not(:last-child) {
     margin-bottom: 8rem;
   }
 
   &:nth-child(even) {
     flex-direction: row-reverse;
-
-    // @media only screen and (max-width: $bp-small) {
-    //   flex-direction: row-reverse !important;
-    // }
   }
 
   &__img-box {
@@ -70,12 +57,37 @@
     backface-visibility: hidden;
     transition: all 0.25s ease-out;
     transform: translateY(200px);
-    // background-color: brown;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $bg-color;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: all 0.3s ease-in;
+    }
+
+    &:hover::after {
+      opacity: 0.6;
+    }
+
+    &:hover .portfolio-block__img {
+      transform: scale(1.05);
+    }
 
     @media only screen and (max-width: $bp-medium) {
       width: 90%;
       height: 300px;
       transform: none;
+      transition: none;
     }
 
     @media only screen and (max-width: $bp-small) {
@@ -87,44 +99,12 @@
     display: block;
     position: relative;
     width: 100%;
+    object-fit: cover;
     height: 100%;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
     transition: all 0.3s ease-in;
     backface-visibility: hidden;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-
-    &:hover::before {
-      opacity: 0.6;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      background-color: $bg-color;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      opacity: 0;
-      transition: all 0.3s ease-in;
-    }
-  }
-
-  &__img-1 {
-    background-image: url(../img/forkify-app.jpg);
-  }
-
-  &__img-2 {
-    background-image: url(../img/todo-app.jpg);
-  }
-
-  &__img-3 {
-    background-image: url(../img/nexter.jpg);
+    grid-row: 1 /-1;
+    grid-column: 1 /-1;
   }
 
   &__details-box {
@@ -133,18 +113,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 8% 7%;
+    padding: 5% 7%;
 
     @media only screen and (max-width: $bp-medium) {
       padding: 8% 4%;
       width: 90%;
       height: auto;
     }
-
-    // @media only screen and (max-width: $bp-small) {
-    //   padding: 5% 3%;
-    //   width: 55%;
-    // }
 
     &__heading {
       font-size: 3rem;
@@ -153,20 +128,10 @@
       line-height: 1.4;
       margin-bottom: 2.5rem;
       margin-top: 0.8rem;
-
-      // @media only screen and (max-width: $bp-small) {
-      //   font-size: 2rem;
-      //   margin: 2rem 0;
-      // }
     }
 
     &__paragraph {
       margin-bottom: 2.5rem;
-
-      // @media only screen and (max-width: $bp-small) {
-      //   margin-bottom: 2rem;
-      //   font-size: 1.6rem;
-      // }
     }
   }
 
@@ -196,11 +161,6 @@
     p {
       font-size: 1.6rem;
     }
-
-    // @media only screen and (max-width: $bp-small) {
-    //   margin-bottom: 1rem;
-    //   font-size: 1.4rem;
-    // }
   }
 
   &__icon-item:not(:last-child) {
@@ -210,10 +170,5 @@
   &--icon {
     width: 2.4rem;
     height: 2.4rem;
-
-    // @media only screen and (max-width: $bp-small) {
-    //   width: 2rem;
-    //   height: 2rem;
-    // }
   }
 }

@@ -1,5 +1,4 @@
 .services {
-  // background-color: forestgreen;
   grid-column: grid-col-start / grid-col-end;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -38,7 +37,6 @@
   &__cards {
     grid-row: 2 / -1;
     grid-column: 1 / -1;
-    // background-color: aqua;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
